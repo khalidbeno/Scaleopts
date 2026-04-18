@@ -36,8 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-Next.js → framework principal
-React → base frontend
-TypeScript → porque tienes @types
-Tailwind CSS → diseño (v4 además 🔥)
-Lucide React → iconos
+Next.js (base)
+  ├── React (componentes)
+  ├── Tailwind (estilos)
+  └── Framer Motion (animaciones)
