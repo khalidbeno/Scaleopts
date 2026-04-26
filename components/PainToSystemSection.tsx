@@ -311,26 +311,62 @@ function MobilePainToSystem() {
   return (
     <div className="mt-8 space-y-8">
       <div className="rounded-[28px] border border-neutral-200 bg-white p-5 shadow-sm">
-        <p className="text-[11px] font-semibold tracking-[0.12em] text-red-500">
-          CURRENT SYSTEM
-        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="rounded-full border border-red-200/80 bg-red-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-red-500">
+            Current system
+          </div>
 
-        <h3 className="mt-3 text-[24px] font-semibold leading-tight tracking-[-0.03em] text-neutral-900">
-          Problems hiding inside your operations
-        </h3>
+          <div className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-[10px] font-medium text-neutral-500">
+            Manual processes Â· Errors Â· Lost revenue
+          </div>
+        </div>
 
-        <div className="mt-6 space-y-3">
-          {[
-            ["Lack of visibility", "Decisions without reliable data"],
-            ["Wasted time", "Hours lost every week"],
-            ["Lost revenue", "Missed opportunities"],
-            ["No scalability", "Systems break when growing"],
-          ].map(([title, text]) => (
-            <div key={title} className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-              <p className="text-[15px] font-semibold text-neutral-900">{title}</p>
-              <p className="mt-1 text-[13px] leading-5 text-neutral-500">{text}</p>
-            </div>
-          ))}
+        <div className="relative mt-5 h-[260px] w-full overflow-hidden">
+          <div className="absolute inset-x-0 top-[58px] h-[118px]">
+            <Image
+              src="/Grafica.png"
+              alt="Problems diagram"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+
+          <div className="absolute left-0 top-0 w-[112px] rounded-[14px] border border-neutral-200/80 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.05)] backdrop-blur-sm">
+            <p className="text-[11px] font-semibold leading-tight text-neutral-900">
+              Lack of visibility
+            </p>
+            <p className="mt-1 text-[9px] leading-3 text-neutral-500">
+              Decisions without reliable data
+            </p>
+          </div>
+
+          <div className="absolute right-0 top-8 w-[112px] rounded-[14px] border border-neutral-200/80 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.05)] backdrop-blur-sm">
+            <p className="text-[11px] font-semibold leading-tight text-neutral-900">
+              Wasted time
+            </p>
+            <p className="mt-1 text-[9px] leading-3 text-neutral-500">
+              Hours lost every week
+            </p>
+          </div>
+
+          <div className="absolute left-0 bottom-8 w-[112px] rounded-[14px] border border-neutral-200/80 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.05)] backdrop-blur-sm">
+            <p className="text-[11px] font-semibold leading-tight text-neutral-900">
+              Lost revenue
+            </p>
+            <p className="mt-1 text-[9px] leading-3 text-neutral-500">
+              Missed opportunities
+            </p>
+          </div>
+
+          <div className="absolute right-0 bottom-0 w-[112px] rounded-[14px] border border-neutral-200/80 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.05)] backdrop-blur-sm">
+            <p className="text-[11px] font-semibold leading-tight text-neutral-900">
+              No scalability
+            </p>
+            <p className="mt-1 text-[9px] leading-3 text-neutral-500">
+              Systems break when growing
+            </p>
+          </div>
         </div>
       </div>
 
