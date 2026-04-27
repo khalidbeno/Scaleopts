@@ -1,9 +1,13 @@
 import Navbar from "@/components/Navbar";
 import HeroServicesStory from "../components/HeroServicesStory";
 import FloatingContact from "../components/FloatingContact";
-import PainToSystemSection from "../components/PainToSystemSection";
+import PainToSystemSection from "@/components/PainToSystemSection";
 import ProcessSection from "@/components/ProcessSection";
 import ContactSection from "@/components/ContactSection";
+
+import SystemShowcaseSection from "@/components/SystemShowcaseSection";
+
+
 
 export default function Home() {
   return (
@@ -17,6 +21,12 @@ export default function Home() {
       <section id="scalable" className="scroll-mt-24">
         <PainToSystemSection />
       </section>
+
+       {/* <section >
+        <SystemShowcaseSection />
+      </section> */}
+
+
 
       <FloatingContact />
 

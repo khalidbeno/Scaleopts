@@ -1,5 +1,5 @@
 "use client";
-
+// noo
 import { useEffect, useRef } from "react";
 
 export default function SystemShowcaseSection() {
@@ -23,7 +23,7 @@ export default function SystemShowcaseSection() {
 
   return (
     <section className="bg-[#f3f3f5] px-6 py-16 md:py-24">
-      <div className="mx-auto max-w-[1280px]">
+      <div className="mx-auto max-w-[1280px] hidden md:block">
 
         {/* ── HEADER ── */}
         <div className="text-center">
@@ -80,40 +80,40 @@ export default function SystemShowcaseSection() {
             {/* ambient glows */}
             <ellipse cx="142" cy="210" rx="110" ry="120" fill="#D4537E" opacity="0.04" />
             <ellipse cx="538" cy="210" rx="110" ry="120" fill="#378ADD" opacity="0.04" />
-            <ellipse cx="340" cy="215" rx="85"  ry="95"  fill="#7F77DD" opacity="0.06" />
+            <ellipse cx="340" cy="215" rx="85" ry="95" fill="#7F77DD" opacity="0.06" />
 
             {/* ── CHAOS LEFT: connections ── */}
-            <line x1="52"  y1="128" x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.7" opacity="0.5" />
-            <line x1="52"  y1="128" x2="144" y2="238" stroke="#ED93B1" strokeWidth="0.5" opacity="0.3" />
-            <line x1="52"  y1="128" x2="80"  y2="278" stroke="#D4537E" strokeWidth="0.5" opacity="0.22" />
-            <line x1="96"  y1="78"  x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.6" opacity="0.38" />
-            <line x1="96"  y1="78"  x2="144" y2="238" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
-            <line x1="68"  y1="195" x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.8" opacity="0.45" />
-            <line x1="68"  y1="195" x2="144" y2="238" stroke="#D4537E" strokeWidth="0.6" opacity="0.32" />
-            <line x1="68"  y1="195" x2="80"  y2="278" stroke="#ED93B1" strokeWidth="0.5" opacity="0.28" />
-            <line x1="80"  y1="278" x2="120" y2="170" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
-            <line x1="50"  y1="320" x2="68"  y2="195" stroke="#ED93B1" strokeWidth="0.5" opacity="0.22" />
-            <line x1="50"  y1="320" x2="80"  y2="278" stroke="#D4537E" strokeWidth="0.7" opacity="0.38" />
-            <line x1="50"  y1="320" x2="144" y2="238" stroke="#ED93B1" strokeWidth="0.4" opacity="0.18" />
-            <line x1="128" y1="342" x2="80"  y2="278" stroke="#D4537E" strokeWidth="0.6" opacity="0.32" />
+            <line x1="52" y1="128" x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.7" opacity="0.5" />
+            <line x1="52" y1="128" x2="144" y2="238" stroke="#ED93B1" strokeWidth="0.5" opacity="0.3" />
+            <line x1="52" y1="128" x2="80" y2="278" stroke="#D4537E" strokeWidth="0.5" opacity="0.22" />
+            <line x1="96" y1="78" x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.6" opacity="0.38" />
+            <line x1="96" y1="78" x2="144" y2="238" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
+            <line x1="68" y1="195" x2="120" y2="170" stroke="#ED93B1" strokeWidth="0.8" opacity="0.45" />
+            <line x1="68" y1="195" x2="144" y2="238" stroke="#D4537E" strokeWidth="0.6" opacity="0.32" />
+            <line x1="68" y1="195" x2="80" y2="278" stroke="#ED93B1" strokeWidth="0.5" opacity="0.28" />
+            <line x1="80" y1="278" x2="120" y2="170" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
+            <line x1="50" y1="320" x2="68" y2="195" stroke="#ED93B1" strokeWidth="0.5" opacity="0.22" />
+            <line x1="50" y1="320" x2="80" y2="278" stroke="#D4537E" strokeWidth="0.7" opacity="0.38" />
+            <line x1="50" y1="320" x2="144" y2="238" stroke="#ED93B1" strokeWidth="0.4" opacity="0.18" />
+            <line x1="128" y1="342" x2="80" y2="278" stroke="#D4537E" strokeWidth="0.6" opacity="0.32" />
             <line x1="128" y1="342" x2="144" y2="238" stroke="#ED93B1" strokeWidth="0.5" opacity="0.22" />
-            <line x1="52"  y1="128" x2="68"  y2="195" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
-            <line x1="96"  y1="78"  x2="50"  y2="320" stroke="#ED93B1" strokeWidth="0.3" opacity="0.12" />
+            <line x1="52" y1="128" x2="68" y2="195" stroke="#D4537E" strokeWidth="0.4" opacity="0.18" />
+            <line x1="96" y1="78" x2="50" y2="320" stroke="#ED93B1" strokeWidth="0.3" opacity="0.12" />
 
             {/* chaos nodes */}
-            <circle cx="52"  cy="128" r="5.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.2" opacity="0.9" />
-            <circle cx="96"  cy="78"  r="4"   fill="#FBEAF0" stroke="#D4537E" strokeWidth="1"   opacity="0.72" />
-            <circle cx="68"  cy="195" r="6.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.3" opacity="0.95" />
-            <circle cx="120" cy="170" r="4"   fill="#F4C0D1" stroke="#D4537E" strokeWidth="1"   opacity="0.68" />
-            <circle cx="144" cy="238" r="5"   fill="#F4C0D1" stroke="#993556" strokeWidth="1"   opacity="0.78" />
-            <circle cx="80"  cy="278" r="7"   fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.3" opacity="0.9" />
-            <circle cx="50"  cy="320" r="4.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1"   opacity="0.68" />
+            <circle cx="52" cy="128" r="5.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.2" opacity="0.9" />
+            <circle cx="96" cy="78" r="4" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1" opacity="0.72" />
+            <circle cx="68" cy="195" r="6.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.3" opacity="0.95" />
+            <circle cx="120" cy="170" r="4" fill="#F4C0D1" stroke="#D4537E" strokeWidth="1" opacity="0.68" />
+            <circle cx="144" cy="238" r="5" fill="#F4C0D1" stroke="#993556" strokeWidth="1" opacity="0.78" />
+            <circle cx="80" cy="278" r="7" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1.3" opacity="0.9" />
+            <circle cx="50" cy="320" r="4.5" fill="#FBEAF0" stroke="#D4537E" strokeWidth="1" opacity="0.68" />
             <circle cx="128" cy="342" r="5.5" fill="#F4C0D1" stroke="#993556" strokeWidth="1.2" opacity="0.82" />
             {/* distortion dots */}
-            <circle cx="36"  cy="245" r="2.5" fill="#D4537E" opacity="0.22" />
-            <circle cx="155" cy="112" r="2"   fill="#D4537E" opacity="0.18" />
-            <circle cx="92"  cy="365" r="2"   fill="#993556" opacity="0.16" />
-            <circle cx="38"  cy="170" r="1.5" fill="#D4537E" opacity="0.14" />
+            <circle cx="36" cy="245" r="2.5" fill="#D4537E" opacity="0.22" />
+            <circle cx="155" cy="112" r="2" fill="#D4537E" opacity="0.18" />
+            <circle cx="92" cy="365" r="2" fill="#993556" opacity="0.16" />
+            <circle cx="38" cy="170" r="1.5" fill="#D4537E" opacity="0.14" />
 
             {/* flow left → core */}
             <path className="flow-anim" d="M156 210 C194 210 218 210 248 218" fill="none" stroke="url(#st-fade-l)" strokeWidth="1.3" strokeDasharray="7 5" opacity="0.65" markerEnd="url(#st-arrow)" />
@@ -153,8 +153,8 @@ export default function SystemShowcaseSection() {
             <path className="flow-anim" d="M420 232 C450 226 472 220 512 220" fill="none" stroke="#378ADD" strokeWidth="0.7" strokeDasharray="5 6" opacity="0.28" />
 
             {/* ── ORDER RIGHT: connections ── */}
-            <line x1="524" y1="96"  x2="554" y2="148" stroke="#85B7EB" strokeWidth="0.8" opacity="0.58" />
-            <line x1="524" y1="96"  x2="584" y2="204" stroke="#85B7EB" strokeWidth="0.5" opacity="0.32" />
+            <line x1="524" y1="96" x2="554" y2="148" stroke="#85B7EB" strokeWidth="0.8" opacity="0.58" />
+            <line x1="524" y1="96" x2="584" y2="204" stroke="#85B7EB" strokeWidth="0.5" opacity="0.32" />
             <line x1="554" y1="148" x2="584" y2="204" stroke="#85B7EB" strokeWidth="0.8" opacity="0.52" />
             <line x1="554" y1="148" x2="570" y2="268" stroke="#378ADD" strokeWidth="0.5" opacity="0.28" />
             <line x1="584" y1="204" x2="570" y2="268" stroke="#85B7EB" strokeWidth="0.8" opacity="0.52" />
@@ -162,11 +162,11 @@ export default function SystemShowcaseSection() {
             <line x1="570" y1="268" x2="554" y2="324" stroke="#85B7EB" strokeWidth="0.8" opacity="0.58" />
             <line x1="570" y1="268" x2="524" y2="342" stroke="#85B7EB" strokeWidth="0.5" opacity="0.32" />
             <line x1="554" y1="324" x2="524" y2="342" stroke="#85B7EB" strokeWidth="0.7" opacity="0.48" />
-            <line x1="524" y1="96"  x2="570" y2="268" stroke="#B5D4F4" strokeWidth="0.4" opacity="0.18" />
+            <line x1="524" y1="96" x2="570" y2="268" stroke="#B5D4F4" strokeWidth="0.4" opacity="0.18" />
             <line x1="524" y1="342" x2="584" y2="204" stroke="#B5D4F4" strokeWidth="0.4" opacity="0.18" />
 
             {/* ordered nodes */}
-            <circle cx="524" cy="96"  r="6" fill="#E6F1FB" stroke="#378ADD" strokeWidth="1.2" />
+            <circle cx="524" cy="96" r="6" fill="#E6F1FB" stroke="#378ADD" strokeWidth="1.2" />
             <circle cx="554" cy="148" r="6" fill="#E6F1FB" stroke="#378ADD" strokeWidth="1.2" />
             <circle cx="584" cy="204" r="6" fill="#E6F1FB" stroke="#185FA5" strokeWidth="1.2" />
             <circle cx="570" cy="268" r="6" fill="#E6F1FB" stroke="#378ADD" strokeWidth="1.2" />
@@ -231,6 +231,144 @@ export default function SystemShowcaseSection() {
             <div className="absolute left-[80%] top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full border border-sky-300 bg-white shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
           </div>
         </div>
+
+      </div>
+      {/* movil */}
+     {/* MOBILE */}
+<div className="block md:hidden">
+  {/* HEADER */}
+  <div className="text-center">
+    <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-fuchsia-500">
+      THE PROCESS
+    </p>
+
+    <h2 className="mt-2 text-[24px] font-semibold tracking-[-0.04em] text-neutral-950">
+      One system. Four phases.
+    </h2>
+
+    <p className="mx-auto mt-2 max-w-[280px] text-[11px] leading-snug text-neutral-400">
+      We don’t deliver reports. We deliver a transformed system — phase by phase
+    </p>
+  </div>
+
+  {/* TIMELINE */}
+  <div className="relative mt-10 grid grid-cols-[1fr_1px_1fr] gap-x-5 gap-y-12">
+    {/* CENTRAL LINE */}
+    <div className="absolute left-1/2 top-0 h-full w-[1.5px] -translate-x-1/2 bg-fuchsia-500" />
+
+    {/* ROW 1 */}
+    <div className="pr-2">
+      <p className="text-[9px] font-bold uppercase text-fuchsia-500">
+        AUDIT YOUR SYSTEM / 01
+      </p>
+      <h3 className="mt-2 text-[17px] font-bold leading-[1.05] tracking-[-0.04em] text-neutral-950">
+        Deep diagnostic
+      </h3>
+      <p className="mt-2 text-[10px] font-semibold leading-tight text-fuchsia-500">
+        Every node. Every bottleneck. Every leak.
+      </p>
+      <p className="mt-2 text-[10px] leading-snug text-neutral-400">
+        We map your entire infrastructure — tools, processes, integrations, and data flows.
+        Nothing is invisible.
+      </p>
+    </div>
+
+    <div />
+
+    <div className="pl-2 pt-1">
+      <div className="rounded-[26px] bg-white/60 p-4">
+        <svg
+          ref={svgRef}
+          viewBox="0 0 680 420"
+          className="h-auto w-full"
+          aria-hidden="true"
+        >
+          {/* pega aquí el MISMO contenido interno del SVG desktop */}
+        </svg>
+      </div>
+    </div>
+
+    {/* ROW 2 */}
+    <div className="pr-2 pt-1">
+      <div className="rounded-[26px] bg-white/60 p-4">
+        <svg viewBox="0 0 680 420" className="h-auto w-full" aria-hidden="true">
+          {/* pega aquí el MISMO contenido interno del SVG desktop */}
+        </svg>
+      </div>
+    </div>
+
+    <div />
+
+    <div className="pl-2">
+      <p className="text-[9px] font-bold uppercase text-fuchsia-500">
+        ARCHITECTURE / 02
+      </p>
+      <h3 className="mt-2 text-[17px] font-bold leading-[1.05] tracking-[-0.04em] text-neutral-950">
+        Blueprint designed.
+      </h3>
+      <p className="mt-2 text-[10px] font-semibold leading-tight text-fuchsia-500">
+        From chaos to structured clarity.
+      </p>
+      <p className="mt-2 text-[10px] leading-snug text-neutral-400">
+        We define the target architecture. Clean topology, logical data flows,
+        and the exact changes required.
+      </p>
+    </div>
+
+    {/* ROW 3 */}
+    <div className="pr-2">
+      <p className="text-[9px] font-bold uppercase text-fuchsia-500">
+        BUILD / 03
+      </p>
+      <h3 className="mt-2 text-[17px] font-bold leading-[1.05] tracking-[-0.04em] text-neutral-950">
+        System rebuilt.
+      </h3>
+      <p className="mt-2 text-[10px] font-semibold leading-tight text-fuchsia-500">
+        Secure. Clean. Automated.
+      </p>
+      <p className="mt-2 text-[10px] leading-snug text-neutral-400">
+        We implement the architecture with secure foundations, better workflows
+        and cleaner infrastructure.
+      </p>
+    </div>
+
+    <div />
+
+    <div className="pl-2 pt-1">
+      <div className="rounded-[26px] bg-white/60 p-4">
+        <svg viewBox="0 0 680 420" className="h-auto w-full" aria-hidden="true">
+          {/* pega aquí el MISMO contenido interno del SVG desktop */}
+        </svg>
+      </div>
+    </div>
+
+    {/* ROW 4 */}
+    <div className="pr-2 pt-1">
+      <div className="rounded-[26px] bg-white/60 p-4">
+        <svg viewBox="0 0 680 420" className="h-auto w-full" aria-hidden="true">
+          {/* pega aquí el MISMO contenido interno del SVG desktop */}
+        </svg>
+      </div>
+    </div>
+
+    <div />
+
+    <div className="pl-2">
+      <p className="text-[9px] font-bold uppercase text-fuchsia-500">
+        SCALE / 04
+      </p>
+      <h3 className="mt-2 text-[17px] font-bold leading-[1.05] tracking-[-0.04em] text-neutral-950">
+        Ready to scale.
+      </h3>
+      <p className="mt-2 text-[10px] font-semibold leading-tight text-fuchsia-500">
+        Less friction. More control.
+      </p>
+      <p className="mt-2 text-[10px] leading-snug text-neutral-400">
+        Your system is documented, monitored and prepared to grow without
+        breaking under pressure.
+      </p>
+    </div>
+  </div>
 
       </div>
     </section>

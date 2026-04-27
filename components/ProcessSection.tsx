@@ -49,8 +49,8 @@ type PhaseType = (typeof phases)[number]["type"];
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="relative overflow-hidden bg-[#f3f3f5] px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-[1280px]">
+    <section id="process" className=" relative overflow-hidden bg-[#f3f3f5] px-6 py-20 md:py-28">
+      <div className="mx-auto hidden max-w-[1280px] md:block">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -144,6 +144,62 @@ export default function ProcessSection() {
           </div>
         </div>
       </div>
+      {/* HEADER MOBILE */}
+<motion.div
+  initial={{ opacity: 0, y: 28 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.7, ease: "easeOut" }}
+  className="mx-auto mb-14 max-w-[320px] text-center md:hidden"
+>
+  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-fuchsia-500">
+    The Process
+  </p>
+
+  <h2 className="text-[26px] font-semibold leading-[1.05] tracking-[-0.04em] text-black">
+    One system. Four phases.
+  </h2>
+
+  <p className="mt-3 text-[13px] leading-[1.5] text-neutral-400">
+    We don’t deliver reports. We deliver a transformed system — phase by phase
+  </p>
+</motion.div>
+      {/* MOBILE VERSION */}
+{/* MOBILE VERSION */}
+<div className="block md:hidden relative mt-12">
+  <div className="absolute left-1/2 top-0 h-full w-[1.5px] -translate-x-1/2 bg-fuchsia-500" />
+
+  <div className="space-y-16">
+    {phases.map((phase, index) => {
+      const isLeft = index % 2 === 0;
+
+      return (
+        <div
+          key={phase.id}
+          className="grid grid-cols-[1fr_1px_1fr] items-start gap-x-4"
+        >
+          {isLeft ? (
+            <>
+              <ProcessTextMobile phase={phase} align="right" />
+              <div />
+              <div className="pl-2">
+                <PhaseCard type={phase.type} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="pr-2">
+                <PhaseCard type={phase.type} />
+              </div>
+              <div />
+              <ProcessTextMobile phase={phase} align="left" />
+            </>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</div>
     </section>
   );
 }
@@ -468,5 +524,36 @@ function Node({
         {label}
       </text>
     </>
+
+
+  );
+}
+
+
+function ProcessTextMobile({
+  phase,
+  align,
+}: {
+  phase: any;
+  align: "left" | "right";
+}) {
+  return (
+    <div className={align === "right" ? "text-right pr-2" : "text-left pl-2"}>
+      <p className="text-[10px] font-semibold uppercase text-fuchsia-500">
+        {phase.label} / {phase.id}
+      </p>
+
+      <h3 className="mt-2 text-[18px] font-semibold leading-tight text-black">
+        {phase.title}
+      </h3>
+
+      <p className="mt-1 text-[11px] font-semibold text-fuchsia-500">
+        {phase.subtitle}
+      </p>
+
+      <p className="mt-2 text-[11px] text-neutral-400 leading-snug">
+        {phase.description}
+      </p>
+    </div>
   );
 }

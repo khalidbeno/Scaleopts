@@ -76,14 +76,14 @@ export default function ContactSection() {
           </div>
 
           {/* Bottom pills */}
-          <div className="mt-10 flex flex-wrap gap-3">
-            <span className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-[13px] text-neutral-500 shadow-sm">
-              🟢 Estimated response &lt;24h
-            </span>
-            <span className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-[13px] text-neutral-500 shadow-sm">
-              🔒 50% deposit to start
-            </span>
-          </div>
+          <div className="mt-10 flex gap-3">
+  <span className="flex-1 text-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-[11px] text-neutral-500 shadow-sm">
+    🟢 Estimated response &lt;24h
+  </span>
+  <span className="flex-1 text-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-[11px] text-neutral-500 shadow-sm">
+    🔒 50% deposit to start
+  </span>
+</div>
         </div>
 
         {/* RIGHT */}
