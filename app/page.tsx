@@ -1,11 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroServicesStory from "../components/HeroServicesStory";
 import FloatingContact from "../components/FloatingContact";
-import PainToSystemSection from "@/components/PainToSystemSection";
-import ProcessSection from "@/components/ProcessSection";
-import ContactSection from "@/components/ContactSection";
-
-import SystemShowcaseSection from "@/components/SystemShowcaseSection";
+import PainToSystemSection from "../components/PainToSystemSection";
+import ProcessSection from "../components/ProcessSection";
+import ContactSection from "../components/ContactSection";
+// import SystemShowcaseSection from "@/components/SystemShowcaseSection";
 
 
 

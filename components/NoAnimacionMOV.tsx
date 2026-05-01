@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -28,10 +29,38 @@ export default function HeroServicesStory() {
   const automationTextOpacity = useTransform(scrollYProgress, [0.42, 0.50], [0, 1]);
   const developmentTextOpacity = useTransform(scrollYProgress, [0.44, 0.52], [0, 1]);
 
+
+  // MOVIL
+  const mobileServicesOpacity = useTransform(scrollYProgress, [0.42, 0.58], [0, 1]);
+  const mobileServicesY = useTransform(scrollYProgress, [0.42, 0.58], [40, 0]);
+
+  const securityXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "-80%"]);
+  const securityYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "120%"]);
+
+  const automationXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "60%"]);
+  const automationYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "180%"]);
+
+  const developmentXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "-70%"]);
+  const developmentYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "250%"]);
+
+// IPAD / TABLET
+// IPAD / TABLET
+const tabletServicesOpacity = useTransform(scrollYProgress, [0.32, 0.52], [0, 1]);
+const tabletServicesY = useTransform(scrollYProgress, [0.32, 0.52], [50, 0]);
+
+const securityXTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "-18%"]);
+const securityYTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "70%"]);
+
+const automationXTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "18%"]);
+const automationYTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "105%"]);
+
+const developmentXTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "-14%"]);
+const developmentYTablet = useTransform(scrollYProgress, [0.14, 0.52], ["0%", "140%"]);
+
   return (
     <section ref={sectionRef} className="relative px-4 md:px-6">
       {/* DESKTOP */}
-      <div className="hidden lg:block h-[200vh]">
+      <div className="hidden xl:block h-[200vh]">
         <div id="hero" className="h-screen scroll-mt-24">
           <div className="mx-auto w-full max-w-[2280px]">
             <div className="h-screen">
@@ -167,140 +196,320 @@ export default function HeroServicesStory() {
         </div>
       </div>
 
-      {/* ================= MOBILE ================= */}
-      <div className="block lg:hidden py-30 "  >
-        <div className="mx-auto max-w-[420px] text-center ">
 
+      {/* ============================================== */}
+      {/* ================= MOBILE ============== */}
+      {/* ============================================== */}
+      <div className="block md:hidden py-16">
+        <div className="mx-auto max-w-[420px] text-center sm:max-w-[620px]">
+
+          {/* HERO TEXT */}
           <p className="text-[20px] font-medium">Scaleopts.</p>
 
-          <h1 className="mt-4 text-[34px] font-bold">
+          <h1 className="mt-4 text-[34px] font-bold sm:text-[46px]">
             <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
               Stop losing money to broken systems.
             </span>
           </h1>
 
-          <p className="mt-5 text-[14px] text-neutral-500">
+          <p className="mx-auto mt-5 max-w-[520px] text-[14px] leading-relaxed text-neutral-500 sm:text-[17px]">
             We design and build systems that eliminate manual work, reduce errors
             and help your business scale without friction.
           </p>
 
-
-          {/* FIGURA ESTÁTICA */}
-          <div className="relative mx-auto mt-4 h-[260px] w-full max-w-[340px]">
-            <Image
-              src="/layer-security.png"
-              alt=""
-              width={620}
-              height={320}
-              className="absolute left-1/2 z-30 top-0 -translate-x-1/2 w-full"
-            />
-            <Image
-              src="/layer-automation.png"
-              alt=""
-              width={620}
-              height={320}
-              className="absolute left-1/2 z-20 top-[40px] -translate-x-1/2 w-full"
-            />
-            <Image
-              src="/layer-development.png"
-              alt=""
-              width={620}
-              height={320}
-              className="absolute left-1/2 z-10 top-[80px] -translate-x-1/2 w-full"
-            />
-          </div>
- <div className="mt-16">
-            <a className="inline-flex rounded-full bg-gradient-to-r from-fuchsia-600 to-sky-500 px-5 py-2 text-white text-[12px]">
+          <div className="mt-6">
+            <a className="inline-flex rounded-full bg-gradient-to-r from-fuchsia-600 to-sky-500 px-5 py-2 text-[12px] font-semibold text-white">
               Get your free system audit
             </a>
           </div>
-          {/* TEXTOS */}
 
-          {/* MOBILE SERVICES */}
-          <div className="mt-12 lg:hidden pb-12">
-            <p className="text-center text-[12px] font-semibold tracking-[0.18em] text-neutral-500">
+          {/* ANIMATED HERO TO SERVICES */}
+          <motion.div className="relative mx-auto mt-10 h-[780px] w-full max-w-[420px] sm:h-[900px] sm:max-w-[620px]">
+
+            {/* SERVICES TITLE */}
+            <motion.div
+              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
+              className="absolute left-1/2 top-0 w-full -translate-x-1/2 text-center"
+            >
+              <p className="text-[12px] font-semibold tracking-[0.18em] text-neutral-500">
+                CORE PILLARS
+              </p>
+
+              <h2 className="mx-auto mt-4 max-w-[360px] text-[34px] font-semibold leading-[0.95] tracking-[-0.05em] sm:max-w-[560px] sm:text-[46px]">
+                <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
+                  Three layers behind a scalable business
+                </span>
+              </h2>
+            </motion.div>
+
+            {/* SECURITY IMAGE */}
+            <motion.div
+              style={{ x: securityXMobile, y: securityYMobile }}
+              className="absolute left-1/2 top-[-80px] z-30 w-[70%] -translate-x-[10%] sm:w-[80%]"
+            >
+              <Image
+                src="/layer-security.png"
+                alt="Security layer"
+                width={620}
+                height={320}
+                className="h-auto w-full object-contain"
+                priority
+              />
+            </motion.div>
+
+            {/* AUTOMATION IMAGE */}
+            <motion.div
+              style={{ x: automationXMobile, y: automationYMobile }}
+              className="absolute left-1/2 top-[-80px] z-20 w-[70%] -translate-x-[70%] sm:w-[70%]"
+            >
+              <Image
+                src="/layer-automation.png"
+                alt="Automation layer"
+                width={620}
+                height={320}
+                className="h-auto w-full object-contain"
+                priority
+              />
+            </motion.div>
+
+            {/* DEVELOPMENT IMAGE */}
+            <motion.div
+              style={{ x: developmentXMobile, y: developmentYMobile }}
+              className="absolute left-1/2 top-[-100px] z-10 w-[70%] -translate-x-[15%] sm:w-[70%]"
+            >
+              <Image
+                src="/layer-development.png"
+                alt="Development layer"
+                width={620}
+                height={320}
+                className="h-auto w-full object-contain"
+                priority
+              />
+            </motion.div>
+
+            {/* SECURITY TEXT */}
+            <motion.div
+              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
+              className="absolute right-[-10] top-[140px] w-[48%] text-left sm:top-[330px]"
+            >
+              <p className="text-[10px] font-semibold tracking-[0.14em] text-fuchsia-500">
+                SECURITY
+              </p>
+              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
+                Cyber foundations first
+              </h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
+                Strong access control, resilient architecture and fewer attack surfaces.
+              </p>
+            </motion.div>
+
+            {/* AUTOMATION TEXT */}
+            <motion.div
+              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
+              className="absolute left-55 top-[430px] w-[48%] text-left sm:top-[560px]"
+            >
+              <p className="text-[10px] font-semibold tracking-[0.14em] text-purple-500">
+                DEVELOPMENT
+              </p>
+              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
+                Optimized systems
+              </h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
+                Clean, scalable architecture designed to grow with your business.
+              </p>
+            </motion.div>
+
+            {/* DEVELOPMENT TEXT */}
+            <motion.div
+              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
+              className="absolute right-50 top-[300px] w-[48%] text-left sm:top-[780px]"
+            >
+              <p className="text-[10px] font-semibold tracking-[0.14em] text-sky-500">
+                AUTOMATION
+              </p>
+              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
+                Faster workflows
+              </h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
+                Eliminate manual processes and connect tools into a seamless operation.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+      {/* ============================================== */}
+      {/* ================= FIN ===================== */}
+      {/* ============================================== */}
+
+{/* ============================================== */}
+{/* ================= IPAD ======================= */}
+{/* ============================================== */}
+<div className="hidden md:block xl:hidden">
+  <div className="h-[250vh]" ref={sectionRef}>
+    <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="mx-auto max-w-[860px] px-6 text-center">
+
+        {/* HERO TEXT — se desvanece al hacer scroll */}
+        <motion.div
+          style={{ opacity: useTransform(scrollYProgress, [0.0, 0.18], [1, 0]) }}
+          className="pt-20"
+        >
+          <p className="text-[22px] font-medium">Scaleopts.</p>
+          <h1 className="mx-auto mt-4 max-w-[760px] text-[54px] font-bold leading-[1.05]">
+            <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
+              Stop losing money to broken systems.
+            </span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-[580px] text-[17px] leading-relaxed text-neutral-500">
+            We design and build systems that eliminate manual work, reduce errors
+            and help your business scale without friction.
+          </p>
+          <div className="mt-7">
+            <a className="inline-flex rounded-full bg-gradient-to-r from-fuchsia-600 to-sky-500 px-6 py-3 text-[13px] font-semibold text-white">
+              Get your free system audit
+            </a>
+          </div>
+        </motion.div>
+
+        {/* CANVAS de animación — posición fija dentro del sticky */}
+        <div className="relative mx-auto mt-10 h-[500px] w-full max-w-[860px]">
+
+          {/* TÍTULO SERVICES — aparece encima de todo */}
+          <motion.div
+            style={{
+              opacity: useTransform(scrollYProgress, [0.38, 0.52], [0, 1]),
+              y: useTransform(scrollYProgress, [0.38, 0.52], [30, 0]),
+            }}
+            className="absolute left-1/2 top-0 z-50 w-full -translate-x-1/2 text-center"
+          >
+            <p className="text-[12px] font-semibold tracking-[0.18em] text-neutral-400">
               CORE PILLARS
             </p>
-
-            <h2 className="mx-auto mt-4 max-w-[360px] text-center text-[34px] font-semibold leading-[0.95] tracking-[-0.05em]">
+            <h2 className="mx-auto mt-3 max-w-[650px] text-[42px] font-semibold leading-[0.95] tracking-[-0.04em]">
               <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
                 Three layers behind a scalable business
               </span>
             </h2>
+          </motion.div>
 
-            <div className="mt-14 space-y-16 text-left">
-              {/* SECURITY - imagen izquierda / texto derecha */}
-              <div className="flex flex-wrap items-center gap-4">
-                <Image
-                  src="/layer-security.png"
-                  alt=""
-                  width={620}
-                  height={320}
-                  className="w-[40%] min-w-[140px] object-contain"
-                />
+          {/* SECURITY IMAGE — arriba izquierda en destino */}
+          <motion.div
+            style={{
+              x: useTransform(scrollYProgress, [0.18, 0.55], ["0%", "-28%"]),
+              y: useTransform(scrollYProgress, [0.18, 0.55], ["0%", "30%"]),
+              scale: useTransform(scrollYProgress, [0.18, 0.55], [1, 0.72]),
+            }}
+            className="absolute left-[20%] top-[30px] z-30 w-[58%]"
+          >
+            <Image
+              src="/layer-security.png"
+              alt="Security layer"
+              width={620}
+              height={320}
+              className="h-auto w-full object-contain"
+              priority
+            />
+          </motion.div>
 
-                <div className="min-w-[180px] flex-1 text-left">
-                  <p className="text-[11px] font-semibold tracking-[0.14em] text-fuchsia-500">
-                    SECURITY
-                  </p>
-                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
-                    Cyber foundations first
-                  </h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
-                    Strong access control, resilient architecture and fewer attack surfaces.
-                  </p>
-                </div>
-              </div>
+          {/* AUTOMATION IMAGE — centro derecha en destino */}
+          <motion.div
+            style={{
+              x: useTransform(scrollYProgress, [0.18, 0.55], ["0%", "28%"]),
+              y: useTransform(scrollYProgress, [0.18, 0.55], ["8%", "55%"]),
+              scale: useTransform(scrollYProgress, [0.18, 0.55], [1, 0.72]),
+            }}
+            className="absolute left-[15%] top-[30px] z-20 w-[58%]"
+          >
+            <Image
+              src="/layer-automation.png"
+              alt="Automation layer"
+              width={620}
+              height={320}
+              className="h-auto w-full object-contain"
+              priority
+            />
+          </motion.div>
 
-              {/* AUTOMATION - texto izquierda / imagen derecha */}
-              <div className="flex flex-wrap items-center gap-4">
-                <div className="min-w-[180px] flex-1 text-left">
-                  <p className="text-[11px] font-semibold tracking-[0.14em] text-purple-500">
-                    AUTOMATION
-                  </p>
-                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
-                    Faster workflows
-                  </h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
-                    Eliminate manual processes and connect tools into a seamless operation.
-                  </p>
-                </div>
+          {/* DEVELOPMENT IMAGE — abajo izquierda en destino */}
+          <motion.div
+            style={{
+              x: useTransform(scrollYProgress, [0.18, 0.55], ["0%", "-24%"]),
+              y: useTransform(scrollYProgress, [0.18, 0.55], ["16%", "80%"]),
+              scale: useTransform(scrollYProgress, [0.18, 0.55], [1, 0.72]),
+            }}
+            className="absolute left-[18%] top-[30px] z-10 w-[58%]"
+          >
+            <Image
+              src="/layer-development.png"
+              alt="Development layer"
+              width={620}
+              height={320}
+              className="h-auto w-full object-contain"
+              priority
+            />
+          </motion.div>
 
-                <Image
-                  src="/layer-automation.png"
-                  alt=""
-                  width={620}
-                  height={320}
-                  className="w-[40%] min-w-[140px] object-contain"
-                />
-              </div>
+          {/* TEXTOS DE SERVICIOS */}
 
-              {/* DEVELOPMENT - imagen izquierda / texto derecha */}
-              <div className="flex flex-wrap items-center gap-4">
-                <Image
-                  src="/layer-development.png"
-                  alt=""
-                  width={620}
-                  height={320}
-                  className="w-[40%] min-w-[140px] object-contain"
-                />
+          {/* SECURITY TEXT — derecha del security image */}
+          <motion.div
+            style={{
+              opacity: useTransform(scrollYProgress, [0.45, 0.58], [0, 1]),
+              x: useTransform(scrollYProgress, [0.45, 0.58], [20, 0]),
+            }}
+            className="absolute right-[4%] top-[23%] z-40 w-[36%] text-left"
+          >
+            <p className="text-[11px] font-semibold tracking-[0.14em] text-fuchsia-500">SECURITY</p>
+            <h3 className="mt-2 text-[22px] font-semibold leading-[1.05] text-neutral-950">
+              Cyber foundations first
+            </h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+              Strong access control, resilient architecture and fewer attack surfaces.
+            </p>
+          </motion.div>
 
-                <div className="min-w-[180px] flex-1 text-left">
-                  <p className="text-[11px] font-semibold tracking-[0.14em] text-sky-500">
-                    DEVELOPMENT
-                  </p>
-                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
-                    Optimized systems
-                  </h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
-                    Clean, scalable architecture designed to grow with your business.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* AUTOMATION TEXT — izquierda del automation image */}
+          <motion.div
+            style={{
+              opacity: useTransform(scrollYProgress, [0.48, 0.61], [0, 1]),
+              x: useTransform(scrollYProgress, [0.48, 0.61], [-20, 0]),
+            }}
+            className="absolute left-[4%] top-[48%] z-40 w-[36%] text-left"
+          >
+            <p className="text-[11px] font-semibold tracking-[0.14em] text-purple-500">AUTOMATION</p>
+            <h3 className="mt-2 text-[22px] font-semibold leading-[1.05] text-neutral-950">
+              Faster workflows
+            </h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+              Eliminate manual processes and connect tools seamlessly.
+            </p>
+          </motion.div>
+
+          {/* DEVELOPMENT TEXT — derecha del development image */}
+          <motion.div
+            style={{
+              opacity: useTransform(scrollYProgress, [0.51, 0.64], [0, 1]),
+              x: useTransform(scrollYProgress, [0.51, 0.64], [20, 0]),
+            }}
+            className="absolute right-[4%] top-[72%] z-40 w-[36%] text-left"
+          >
+            <p className="text-[11px] font-semibold tracking-[0.14em] text-sky-500">DEVELOPMENT</p>
+            <h3 className="mt-2 text-[22px] font-semibold leading-[1.05] text-neutral-950">
+              Optimized systems
+            </h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+              Clean, scalable architecture designed to grow with your business.
+            </p>
+          </motion.div>
+
         </div>
       </div>
+    </div>
+  </div>
+</div>
+{/* ============================================== */}
+{/* ================= FIN IPAD ================== */}
+{/* ============================================== */}
     </section>
   );
 }

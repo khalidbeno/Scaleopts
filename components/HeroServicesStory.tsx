@@ -28,20 +28,6 @@ export default function HeroServicesStory() {
   const automationTextOpacity = useTransform(scrollYProgress, [0.42, 0.50], [0, 1]);
   const developmentTextOpacity = useTransform(scrollYProgress, [0.44, 0.52], [0, 1]);
 
-
-  // MOVIL
-  const mobileServicesOpacity = useTransform(scrollYProgress, [0.42, 0.58], [0, 1]);
-  const mobileServicesY = useTransform(scrollYProgress, [0.42, 0.58], [40, 0]);
-
-  const securityXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "-80%"]);
-  const securityYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "120%"]);
-
-  const automationXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "60%"]);
-  const automationYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "180%"]);
-
-  const developmentXMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "-70%"]);
-  const developmentYMobile = useTransform(scrollYProgress, [0.12, 0.50], ["0%", "250%"]);
-
   return (
     <section ref={sectionRef} className="relative px-4 md:px-6">
       {/* DESKTOP */}
@@ -57,9 +43,9 @@ export default function HeroServicesStory() {
                 </span>
               </h1>
 
-              <p className="mx-auto mt-8 max-w-[600px] text-center text-[14px] leading-relaxed text-neutral-500 md:text-[16px]">
-                We design and build systems that eliminate manual work, reduce errors
-                and help your business scale without friction.
+              <p className="mx-auto mt-8 max-w-[780px] text-center text-[14px] leading-relaxed text-neutral-500 md:text-[16px]">
+                We help you scale by building systems from scratch or improving the ones you already have —
+                 automating processes and securing your business so you save time, avoid losses, and grow without friction.
               </p>
 
               <div className="mt-6 flex justify-center">
@@ -128,7 +114,7 @@ export default function HeroServicesStory() {
 
               <h2 className="mt-3 whitespace-nowrap text-[42px] font-semibold leading-[1.05] tracking-[-0.04em] md:text-[50px]">
                 <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
-                  Three layers behind a scalable business
+                  The three systems every scalable business needs
                 </span>
               </h2>
             </motion.div>
@@ -137,14 +123,14 @@ export default function HeroServicesStory() {
               style={{ opacity: securityTextOpacity }}
               className="absolute right-[25%] top-[25%] max-w-[420px]"
             >
-              <p className="text-[14px] font-semibold tracking-[0.08em] text-fuchsia-500">
-                SECURITY
+              <p className="text-[18px] font-semibold tracking-[0.08em] text-fuchsia-500">
+                Protection & Control
               </p>
-              <h3 className="mt-2 text-[28px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
-                Cyber foundations first
+              <h3 className="whitespace-nowrap mt-2 text-[24px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
+                Protect your money and make better decisions.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-neutral-500">
-                Strong access control, resilient architecture and fewer attack surfaces across your system.
+                Secure your business, prevent losses, and understand what is working, what is failing, and where to improve.
               </p>
             </motion.div>
 
@@ -152,14 +138,14 @@ export default function HeroServicesStory() {
               style={{ opacity: automationTextOpacity }}
               className="absolute left-[10%] top-[50%] max-w-[420px]"
             >
-              <p className="text-[14px] font-semibold tracking-[0.08em] text-purple-500">
-                AUTOMATION
+              <p className="text-[18px] font-semibold tracking-[0.08em] text-purple-500">
+                Acquisition
               </p>
-              <h3 className="mt-2 text-[28px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
-                Faster workflows
+              <h3 className="whitespace-nowrap mt-2 text-[24px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
+                Turn attention into revenue.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-neutral-500">
-                Eliminate manual processes and connect tools into a seamless, efficient operation.
+                Attract customers consistently and convert opportunities into real income.
               </p>
             </motion.div>
 
@@ -167,164 +153,154 @@ export default function HeroServicesStory() {
               style={{ opacity: developmentTextOpacity }}
               className="absolute right-[25%] top-[75%] max-w-[420px]"
             >
-              <p className="text-[14px] font-semibold tracking-[0.08em] text-sky-500">
-                DEVELOPMENT
+              <p className="text-[18px] font-semibold tracking-[0.08em] text-sky-500">
+               Systems
               </p>
-              <h3 className="mt-2 text-[28px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
-                Optimized systems
+              <h3 className="whitespace-nowrap mt-2 text-[24px] font-semibold leading-[1.1] tracking-[-0.03em] text-neutral-900">
+                Run your business without chaos.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-neutral-500">
-                Clean, scalable and maintainable architecture designed to grow with your business.
+               Automate manual work, connect your tools, and build reliable systems that save time and reduce friction.
               </p>
             </motion.div>
           </div>
         </div>
       </div>
 
+      {/* ================= MOBILE ================= */}
+      <div className="block lg:hidden py-30 "  >
+        <div className="mx-auto max-w-[420px] text-center ">
 
-      {/* ============================================== */}
-      {/* ================= MOBILE / IPAD ============== */}
-      {/* ============================================== */}
-      <div className="block lg:hidden py-16">
-        <div className="mx-auto max-w-[420px] text-center sm:max-w-[620px]">
-
-          {/* HERO TEXT */}
           <p className="text-[20px] font-medium">Scaleopts.</p>
 
-          <h1 className="mt-4 text-[34px] font-bold sm:text-[46px]">
+          <h1 className="mt-4 text-[34px] font-bold">
             <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
               Stop losing money to broken systems.
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-[520px] text-[14px] leading-relaxed text-neutral-500 sm:text-[17px]">
+          <p className="mt-5 text-[14px] text-neutral-500">
             We design and build systems that eliminate manual work, reduce errors
             and help your business scale without friction.
           </p>
 
-          <div className="mt-6">
-            <a className="inline-flex rounded-full bg-gradient-to-r from-fuchsia-600 to-sky-500 px-5 py-2 text-[12px] font-semibold text-white">
+
+          {/* FIGURA ESTÁTICA */}
+          <div className="relative mx-auto mt-4 h-[260px] w-full max-w-[340px]">
+            <Image
+              src="/layer-security.png"
+              alt=""
+              width={620}
+              height={320}
+              className="absolute left-1/2 z-30 top-0 -translate-x-1/2 w-full"
+            />
+            <Image
+              src="/layer-automation.png"
+              alt=""
+              width={620}
+              height={320}
+              className="absolute left-1/2 z-20 top-[40px] -translate-x-1/2 w-full"
+            />
+            <Image
+              src="/layer-development.png"
+              alt=""
+              width={620}
+              height={320}
+              className="absolute left-1/2 z-10 top-[80px] -translate-x-1/2 w-full"
+            />
+          </div>
+ <div className="mt-16">
+            <a className="inline-flex rounded-full bg-gradient-to-r from-fuchsia-600 to-sky-500 px-5 py-2 text-white text-[12px]">
               Get your free system audit
             </a>
           </div>
+          {/* TEXTOS */}
 
-          {/* ANIMATED HERO TO SERVICES */}
-          <motion.div className="relative mx-auto mt-10 h-[780px] w-full max-w-[420px] sm:h-[900px] sm:max-w-[620px]">
+          {/* MOBILE SERVICES */}
+          <div className="mt-12 lg:hidden pb-12">
+            <p className="text-center text-[12px] font-semibold tracking-[0.18em] text-neutral-500">
+              CORE PILLARS
+            </p>
 
-            {/* SERVICES TITLE */}
-            <motion.div
-              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
-              className="absolute left-1/2 top-0 w-full -translate-x-1/2 text-center"
-            >
-              <p className="text-[12px] font-semibold tracking-[0.18em] text-neutral-500">
-                CORE PILLARS
-              </p>
+            <h2 className="mx-auto mt-4 max-w-[360px] text-center text-[34px] font-semibold leading-[0.95] tracking-[-0.05em]">
+              <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
+                Three layers behind a scalable business
+              </span>
+            </h2>
 
-              <h2 className="mx-auto mt-4 max-w-[360px] text-[34px] font-semibold leading-[0.95] tracking-[-0.05em] sm:max-w-[560px] sm:text-[46px]">
-                <span className="bg-gradient-to-r from-fuchsia-600 via-purple-500 to-sky-500 bg-clip-text text-transparent">
-                  Three layers behind a scalable business
-                </span>
-              </h2>
-            </motion.div>
+            <div className="mt-14 space-y-16 text-left">
+              {/* SECURITY - imagen izquierda / texto derecha */}
+              <div className="flex flex-wrap items-center gap-4">
+                <Image
+                  src="/layer-security.png"
+                  alt=""
+                  width={620}
+                  height={320}
+                  className="w-[40%] min-w-[140px] object-contain"
+                />
 
-            {/* SECURITY IMAGE */}
-            <motion.div
-              style={{ x: securityXMobile, y: securityYMobile }}
-              className="absolute left-1/2 top-[-80px] z-30 w-[70%] -translate-x-[10%] sm:w-[80%]"
-            >
-              <Image
-                src="/layer-security.png"
-                alt="Security layer"
-                width={620}
-                height={320}
-                className="h-auto w-full object-contain"
-                priority
-              />
-            </motion.div>
+                <div className="min-w-[180px] flex-1 text-left">
+                  <p className="text-[11px] font-semibold tracking-[0.14em] text-fuchsia-500">
+                    SECURITY
+                  </p>
+                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
+                    Cyber foundations first
+                  </h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+                    Strong access control, resilient architecture and fewer attack surfaces.
+                  </p>
+                </div>
+              </div>
 
-            {/* AUTOMATION IMAGE */}
-            <motion.div
-              style={{ x: automationXMobile, y: automationYMobile }}
-              className="absolute left-1/2 top-[-80px] z-20 w-[70%] -translate-x-[70%] sm:w-[70%]"
-            >
-              <Image
-                src="/layer-automation.png"
-                alt="Automation layer"
-                width={620}
-                height={320}
-                className="h-auto w-full object-contain"
-                priority
-              />
-            </motion.div>
+              {/* AUTOMATION - texto izquierda / imagen derecha */}
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="min-w-[180px] flex-1 text-left">
+                  <p className="text-[11px] font-semibold tracking-[0.14em] text-purple-500">
+                    AUTOMATION
+                  </p>
+                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
+                    Faster workflows
+                  </h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+                    Eliminate manual processes and connect tools into a seamless operation.
+                  </p>
+                </div>
 
-            {/* DEVELOPMENT IMAGE */}
-            <motion.div
-              style={{ x: developmentXMobile, y: developmentYMobile }}
-              className="absolute left-1/2 top-[-100px] z-10 w-[70%] -translate-x-[15%] sm:w-[70%]"
-            >
-              <Image
-                src="/layer-development.png"
-                alt="Development layer"
-                width={620}
-                height={320}
-                className="h-auto w-full object-contain"
-                priority
-              />
-            </motion.div>
+                <Image
+                  src="/layer-automation.png"
+                  alt=""
+                  width={620}
+                  height={320}
+                  className="w-[40%] min-w-[140px] object-contain"
+                />
+              </div>
 
-            {/* SECURITY TEXT */}
-            <motion.div
-              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
-              className="absolute right-[-10] top-[140px] w-[48%] text-left sm:top-[330px]"
-            >
-              <p className="text-[10px] font-semibold tracking-[0.14em] text-fuchsia-500">
-                SECURITY
-              </p>
-              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
-                Cyber foundations first
-              </h3>
-              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
-                Strong access control, resilient architecture and fewer attack surfaces.
-              </p>
-            </motion.div>
+              {/* DEVELOPMENT - imagen izquierda / texto derecha */}
+              <div className="flex flex-wrap items-center gap-4">
+                <Image
+                  src="/layer-development.png"
+                  alt=""
+                  width={620}
+                  height={320}
+                  className="w-[40%] min-w-[140px] object-contain"
+                />
 
-            {/* AUTOMATION TEXT */}
-            <motion.div
-              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
-              className="absolute left-55 top-[430px] w-[48%] text-left sm:top-[560px]"
-            >
-              <p className="text-[10px] font-semibold tracking-[0.14em] text-purple-500">
-                DEVELOPMENT
-              </p>
-              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
-                Optimized systems
-              </h3>
-              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
-                Clean, scalable architecture designed to grow with your business.
-              </p>
-            </motion.div>
-
-            {/* DEVELOPMENT TEXT */}
-            <motion.div
-              style={{ opacity: mobileServicesOpacity, y: mobileServicesY }}
-              className="absolute right-50 top-[300px] w-[48%] text-left sm:top-[780px]"
-            >
-              <p className="text-[10px] font-semibold tracking-[0.14em] text-sky-500">
-                AUTOMATION
-              </p>
-              <h3 className="mt-1 text-[18px] font-semibold leading-[1.05] text-neutral-950 sm:text-[22px]">
-                Faster workflows
-              </h3>
-              <p className="mt-2 text-[12px] leading-relaxed text-neutral-500 sm:text-[14px]">
-                Eliminate manual processes and connect tools into a seamless operation.
-              </p>
-            </motion.div>
-          </motion.div>
+                <div className="min-w-[180px] flex-1 text-left">
+                  <p className="text-[11px] font-semibold tracking-[0.14em] text-sky-500">
+                    DEVELOPMENT
+                  </p>
+                  <h3 className="mt-1 text-[20px] font-semibold leading-[1.05] text-neutral-950">
+                    Optimized systems
+                  </h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-500">
+                    Clean, scalable architecture designed to grow with your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {/* ============================================== */}
-      {/* ================= FIN ===================== */}
-      {/* ============================================== */}
     </section>
   );
 }
